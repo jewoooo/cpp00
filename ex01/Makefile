@@ -5,31 +5,9 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jewlee <jewlee@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/06 15:12:41 by jewlee            #+#    #+#              #
-#    Updated: 2024/08/06 15:15:13 by jewlee           ###   ########.fr        #
+#    Created: 2024/08/06 15:16:33 by jewlee            #+#    #+#              #
+#    Updated: 2024/08/06 15:23:41 by jewlee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror
-CXX98 = -std=c++98
-SRCS = megaphone.cpp
-OBJS = $(SRCS:.cpp=.o)
-
-all: $(NAME)
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(CXX98) $(OBJS) -o $(NAME)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) $(CXX98) -c $< -o $@
-
-clean:
-	rm -f $(OBJS)
-
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all
-
-.PHONY: all clean fclean re
+NAME= phonebook
